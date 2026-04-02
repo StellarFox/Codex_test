@@ -51,28 +51,6 @@ python excel_ollama_embeddings.py \
 Dabei landet jede Embedding-Dimension in einer eigenen numerischen Spalte (`G`, `H`, `I`, ...), z. B. `emb_1`, `emb_2`, ...  
 Das ist direkt als Feature-Matrix in MATLAB nutzbar.
 
-### Windows-Hinweis (CMD / PowerShell)
-
-Die gezeigten Backslashes `\` sind für **Bash** gedacht.  
-Unter **Windows CMD** den Befehl bitte **einzeilig** ausführen:
-
-```bat
-python excel_ollama_embeddings.py --input 02_output_ASReview_2.snowball_embed.xlsx --model nomic-embed-text-v2-moe:latest --output-mode columns --output-col G --output-prefix emb_
-```
-
-Oder in **CMD mehrzeilig** mit `^` statt `\`:
-
-```bat
-python excel_ollama_embeddings.py ^
-  --input 02_output_ASReview_2.snowball_embed.xlsx ^
-  --model nomic-embed-text-v2-moe:latest ^
-  --output-mode columns ^
-  --output-col G ^
-  --output-prefix emb_
-```
-
-In **PowerShell** ist meist ebenfalls die einzeilige Variante am einfachsten.
-
 ## Workflow für MATLAB (Classification Learner / PCA / Clustering)
 
 1. Embeddings mit `--output-mode columns` erzeugen (siehe oben).
